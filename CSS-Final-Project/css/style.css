@@ -1,0 +1,234 @@
+
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f4f8fc;
+    color: #172b3a;
+}
+
+/* Skip link: visible only when focused */
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    width: auto;
+    height: auto;
+    padding: 12px 18px;
+    background-color: #ffffff;
+    color: #102b46;
+    border: 3px solid #102b46;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Header */
+header {
+    background-color: #124e66;
+    color: white;
+    text-align: center;
+    padding: 32px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 22px;
+}
+
+/* Navigation with Flexbox */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    background-color: #0b354b;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+nav a {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #205d73;
+    padding: 12px 25px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s,
+                transform 0.3s;
+}
+
+/* Hover and keyboard focus */
+nav a:hover,
+nav a:focus-visible {
+    background-color: #ffffff;
+    color: #102b46;
+    transform: translateY(-4px);
+}
+
+nav a[aria-current="page"] {
+    background-color: #ffffff;
+    color: #102b46;
+}
+
+/* Main layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+h2 {
+    color: #124e66;
+    text-align: center;
+}
+
+main > p {
+    text-align: center;
+}
+
+/* Image box model */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #205d73;
+    padding: 6px;
+    border-radius: 14px;
+    background-color: #ffffff;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+/* CSS Grid */
+.home-grid,
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #d1e1ec;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #124e66;
+}
+
+.card a {
+    color: #075985;
+    font-weight: bold;
+}
+
+/* Hover effects */
+.card {
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid images */
+.places-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* nth-child selector */
+.places-grid .card:nth-child(even) img {
+    border-radius: 35px 8px 35px 8px;
+}
+
+/* Flexbox food gallery */
+.food-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.food-flex .card {
+    flex: 1 1 280px;
+    max-width: 370px;
+}
+
+.food-flex img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Alternate styles */
+.food-flex .card:nth-child(even) img {
+    border-radius: 50px 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #0b354b;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Responsive design */
+@media (max-width: 650px) {
+    .home-grid,
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 16px;
+    }
+}
