@@ -11,8 +11,24 @@ header {
 }
 
 nav {
+    display: inline-block;
+    width: 80%;
     background-color: #234d38;
     padding: 15px;
+    box-sizing: border-box;
+}
+
+/* CSS li cũ được comment lại */
+/*
+li {
+    display: inline-block;
+    width: 30%;
+}
+*/
+
+nav img {
+    width: 10%;
+    height: auto;
 }
 
 main {
@@ -27,11 +43,6 @@ footer {
     padding: 15px;
 }
 
-li {
-    display: inline-block;
-    width: 30%;
-}
-
 h1 {
     text-align: center;
     font-family: Georgia, serif;
@@ -42,6 +53,41 @@ p {
     line-height: 1.6;
 }
 
-nav a, footer a {
+nav a,
+footer a {
     color: white;
+}
+
+/* Grid - Neighborhood */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+/* Flexbox - Parks */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+/* Skip to Main Content */
+a[href="#main-content"] {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    color: #173c2a;
+}
+
+a[href="#main-content"]:focus {
+    outline: 3px solid #173c2a;
 }
