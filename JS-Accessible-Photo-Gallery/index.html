@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Accessible Interactive Photo Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body onload="addTabFocus()">
+
+    <main>
+        <h1>Interactive Photo Gallery</h1>
+
+        <div id="image" aria-live="polite">
+            Hover over or focus on an image below to display here.
+        </div>
+
+        <div class="gallery">
+
+            <img src="images/photo1.jpg"
+                 alt="Green forest with sunlight"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img src="images/photo2.jpg"
+                 alt="Waterfall surrounded by trees"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img src="images/photo3.jpg"
+                 alt="Mountain range at sunrise"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img src="images/photo4.jpg"
+                 alt="Blue ocean and sandy beach"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img src="images/photo5.jpg"
+                 alt="Lake reflecting the mountains"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img src="images/photo6.jpg"
+                 alt="Colorful flowers in a garden"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+        </div>
+    </main>
+
+</body>
+</html>
